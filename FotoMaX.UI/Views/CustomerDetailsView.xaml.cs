@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FotoMaX
+namespace FotoMaX.UI.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CustomerDetailsView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CustomerDetailsView : UserControl
     {
-        public MainWindow()
+        public CustomerDetailsView()
         {
             InitializeComponent();
         }
