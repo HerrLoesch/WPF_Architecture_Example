@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{81DF54EF-AD2D-4C44-B678-438BC4F8D8F5}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>FotoMaX</RootNamespace>
-    <AssemblyName>FotoMaX</AssemblyName>
+    <ProjectGuid>{35079620-026F-43A3-99F4-2151BBB93FEA}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>FotoMaX.Theme</RootNamespace>
+    <AssemblyName>FotoMaX.Theme</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -50,36 +47,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="ViewModels\SettingsViewModel.cs" />
-    <Compile Include="Views\SettingsView.xaml.cs">
-      <DependentUpon>SettingsView.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Views\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Infrastructure\Logger.cs" />
-    <Compile Include="Infrastructure\SettingsManagement.cs" />
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Views\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Views\SettingsView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,31 +68,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FotoMaX.Data\FotoMaX.Data.csproj">
-      <Project>{CE3982A4-DF3C-45CF-931A-6FB5309B7C81}</Project>
-      <Name>FotoMaX.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FotoMaX.Interfaces\FotoMaX.Contracts.csproj">
-      <Project>{944A0BF8-7F60-448D-8548-9AFE2CC7D6DD}</Project>
-      <Name>FotoMaX.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FotoMaX.Theme\FotoMaX.Theme.csproj">
-      <Project>{35079620-026f-43a3-99f4-2151bbb93fea}</Project>
-      <Name>FotoMaX.Theme</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FotoMaX.UI\FotoMaX.UI.csproj">
-      <Project>{53BD622A-2F12-4EB2-A749-0B1CA60BA509}</Project>
-      <Name>FotoMaX.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FotoMaXLogic\FotoMaX.Logic.csproj">
-      <Project>{28B1E73E-467C-44D6-861F-AE711C43F652}</Project>
-      <Name>FotoMaX.Logic</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
