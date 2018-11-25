@@ -37,10 +37,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Behaviors\" />
-    <Folder Include="Converters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -69,10 +66,10 @@
   <ItemGroup>
     <Compile Include="MVVM\DelegateCommand.cs" />
     <Compile Include="MVVM\ViewModelBase.cs" />
-    <Compile Include="ViewModelDiscoverer.cs" />
+    <Compile Include="MVVM\ViewModelDiscoverer.cs" />
     <Compile Include="ViewModels\CustomerDetailsViewModel.cs" />
     <Compile Include="ViewModels\PictureSelectionViewModel.cs" />
-    <Compile Include="ViewModels\OrderDetailsView.cs" />
+    <Compile Include="ViewModels\OrderDetailsViewModel.cs" />
     <Compile Include="Views\CustomerDetailsView.xaml.cs">
       <DependentUpon>CustomerDetailsView.xaml</DependentUpon>
     </Compile>

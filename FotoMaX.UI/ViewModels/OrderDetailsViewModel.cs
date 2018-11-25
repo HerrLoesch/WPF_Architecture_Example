@@ -9,9 +9,9 @@ namespace FotoMaX.UI.ViewModels
     using FotoMaX.Interfaces.Logic;
     using FotoMaX.UI.MVVM;
 
-    public class OrderDetailsView : ViewModelBase
+    public class OrderDetailsViewModel : ViewModelBase
     {
-        public OrderDetailsView(IOrderService orderService)
+        public OrderDetailsViewModel(IOrderService orderService)
         {
             
         }
