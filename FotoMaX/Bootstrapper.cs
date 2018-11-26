@@ -9,13 +9,9 @@ namespace FotoMaX
     using System.Windows;
 
     using FotoMaX.Data;
-    using FotoMaX.Infrastructure;
     using FotoMaX.Interfaces;
-    using FotoMaX.Interfaces.Data;
     using FotoMaX.Interfaces.Infrastructure;
-    using FotoMaX.Interfaces.Logic;
 
-    using FotoMaXLogic;
 
     public class Bootstrapper
     {
@@ -28,10 +24,13 @@ namespace FotoMaX
             RegisterTypes(typeContainer, logger);
             
             var shell = CreateShell(typeContainer);
+
+            InitializeModules();
+
             
             Show(shell);
         }
-        
+
         private static ILogger InitLogger()
         {
             return null;
@@ -47,13 +46,6 @@ namespace FotoMaX
             // Infrastructure
             typeContainer.Register<ILogger, Logger>();
             typeContainer.Register<ISettingsManagement, SettingsManagement>();
-
-            // Logic
-            typeContainer.Register<IOrderService, OrderService>();
-
-            // Data
-            typeContainer.Register<IPictureRepository, PictureRepository>();
-            typeContainer.Register<ICustomerRepository, CustomerRepository>();
         }
         
         private static Window CreateShell(ITypeContainer container)
@@ -64,11 +56,11 @@ namespace FotoMaX
         private static void Show(Window shell)
         {
         }
-    }
 
-    internal interface ITypeContainer
-    {
-        void Register<TFrom, TTo>();
+        private static void InitializeModules()
+        {
+            
+        }
     }
 }
 

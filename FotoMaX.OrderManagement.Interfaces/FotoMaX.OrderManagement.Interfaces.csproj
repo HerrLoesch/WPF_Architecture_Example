@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{944A0BF8-7F60-448D-8548-9AFE2CC7D6DD}</ProjectGuid>
+    <ProjectGuid>{B5F2EF50-F819-4FD4-A9D6-A15F9DF6D076}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FotoMaX.Interfaces</RootNamespace>
-    <AssemblyName>FotoMaX.Interfaces</AssemblyName>
+    <RootNamespace>FotoMaX.OrderManagement.Interfaces</RootNamespace>
+    <AssemblyName>FotoMaX.OrderManagement.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -38,13 +38,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\IModule.cs" />
-    <Compile Include="Infrastructure\ITypeContainer.cs" />
-    <Compile Include="Infrastructure\ILogger.cs" />
-    <Compile Include="Infrastructure\ISettingsManagement.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logic\" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="IOrderService.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Picture.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace FotoMaX.UI
+﻿namespace FotoMaX.UI.MVVM
 {
     using System.Windows;
 

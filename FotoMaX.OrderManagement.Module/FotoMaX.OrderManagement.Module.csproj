@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{944A0BF8-7F60-448D-8548-9AFE2CC7D6DD}</ProjectGuid>
+    <ProjectGuid>{62A94EE5-ED1F-4F62-9BC4-30D6B88B2DD6}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FotoMaX.Interfaces</RootNamespace>
-    <AssemblyName>FotoMaX.Interfaces</AssemblyName>
+    <RootNamespace>FotoMaX.OrderManagement.Module</RootNamespace>
+    <AssemblyName>FotoMaX.OrderManagement.Module</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -38,13 +38,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\IModule.cs" />
-    <Compile Include="Infrastructure\ITypeContainer.cs" />
-    <Compile Include="Infrastructure\ILogger.cs" />
-    <Compile Include="Infrastructure\ISettingsManagement.cs" />
+    <Compile Include="OrderManagementModule.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logic\" />
+    <ProjectReference Include="..\FotoMaX.Interfaces\FotoMaX.Contracts.csproj">
+      <Project>{944a0bf8-7f60-448d-8548-9afe2cc7d6dd}</Project>
+      <Name>FotoMaX.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoMaX.OrderManagement.Data\FotoMaX.OrderManagement.Data.csproj">
+      <Project>{72e40955-e68a-4790-90b5-6116dc20725d}</Project>
+      <Name>FotoMaX.OrderManagement.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoMaX.OrderManagement.Interfaces\FotoMaX.OrderManagement.Interfaces.csproj">
+      <Project>{b5f2ef50-f819-4fd4-a9d6-a15f9df6d076}</Project>
+      <Name>FotoMaX.OrderManagement.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoMaX.OrderManagement.Logic\FotoMaX.OrderManagement.Logic.csproj">
+      <Project>{98ac4fc2-dbfc-46f6-8d46-af7e49655e75}</Project>
+      <Name>FotoMaX.OrderManagement.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoMaX.OrderManagement.UI\FotoMaX.OrderManagement.UI.csproj">
+      <Project>{f103cf17-fe54-4729-b46b-e920a9c04aba}</Project>
+      <Name>FotoMaX.OrderManagement.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

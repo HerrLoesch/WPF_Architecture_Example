@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{944A0BF8-7F60-448D-8548-9AFE2CC7D6DD}</ProjectGuid>
+    <ProjectGuid>{CE3982A4-DF3C-45CF-931A-6FB5309B7C81}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FotoMaX.Interfaces</RootNamespace>
-    <AssemblyName>FotoMaX.Interfaces</AssemblyName>
+    <RootNamespace>FotoMaX.Data</RootNamespace>
+    <AssemblyName>FotoMaX.Data</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -38,13 +38,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\IModule.cs" />
-    <Compile Include="Infrastructure\ITypeContainer.cs" />
-    <Compile Include="Infrastructure\ILogger.cs" />
-    <Compile Include="Infrastructure\ISettingsManagement.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="SettingsManagement.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logic\" />
+    <ProjectReference Include="..\FotoMaX.Interfaces\FotoMaX.Contracts.csproj">
+      <Project>{944A0BF8-7F60-448D-8548-9AFE2CC7D6DD}</Project>
+      <Name>FotoMaX.Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{944A0BF8-7F60-448D-8548-9AFE2CC7D6DD}</ProjectGuid>
+    <ProjectGuid>{1410F876-5424-4F72-B721-C4D81FA28386}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FotoMaX.Interfaces</RootNamespace>
-    <AssemblyName>FotoMaX.Interfaces</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FotoMaX.ImageManagement.UI</RootNamespace>
+    <AssemblyName>FotoMaX.ImageManagement.UI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,20 +29,33 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Infrastructure\IModule.cs" />
-    <Compile Include="Infrastructure\ITypeContainer.cs" />
-    <Compile Include="Infrastructure\ILogger.cs" />
-    <Compile Include="Infrastructure\ISettingsManagement.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logic\" />
+    <ProjectReference Include="..\FotoMaX.ImageManagement.Interfaces\FotoMaX.ImageManagement.Interfaces.csproj">
+      <Project>{edecb7c6-2f4c-411d-84b5-eb85976e6a5d}</Project>
+      <Name>FotoMaX.ImageManagement.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoMaX.Interfaces\FotoMaX.Contracts.csproj">
+      <Project>{944a0bf8-7f60-448d-8548-9afe2cc7d6dd}</Project>
+      <Name>FotoMaX.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoMaX.Theme\FotoMaX.Theme.csproj">
+      <Project>{35079620-026f-43a3-99f4-2151bbb93fea}</Project>
+      <Name>FotoMaX.Theme</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

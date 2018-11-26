@@ -53,18 +53,28 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodedUI\CodedUITest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CodedUI\UIMap.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FotoMaX.Data\FotoMaX.Data.csproj">
-      <Project>{ce3982a4-df3c-45cf-931a-6fb5309b7c81}</Project>
-      <Name>FotoMaX.Data</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="API\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FotoMaX.CustomerManagement.Data\FotoMaX.CustomerManagement.Data.csproj">
+      <Project>{51e23ff2-5039-41c2-b7f9-9e5f55adeefe}</Project>
+      <Name>FotoMaX.CustomerManagement.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoMaX.ImageManagement.Data\FotoMaX.ImageManagement.Data.csproj">
+      <Project>{05798c6f-2107-464e-a6c3-1680e38fd876}</Project>
+      <Name>FotoMaX.ImageManagement.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoMaX.Interfaces\FotoMaX.Contracts.csproj">
+      <Project>{944a0bf8-7f60-448d-8548-9afe2cc7d6dd}</Project>
+      <Name>FotoMaX.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FotoMaX.OrderManagement.Data\FotoMaX.OrderManagement.Data.csproj">
+      <Project>{72e40955-e68a-4790-90b5-6116dc20725d}</Project>
+      <Name>FotoMaX.OrderManagement.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
