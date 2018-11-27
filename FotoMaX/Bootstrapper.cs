@@ -11,7 +11,7 @@ namespace FotoMaX
     using FotoMaX.Data;
     using FotoMaX.Interfaces;
     using FotoMaX.Interfaces.Infrastructure;
-
+    using FotoMaX.Views;
 
     public class Bootstrapper
     {
@@ -26,7 +26,6 @@ namespace FotoMaX
             var shell = CreateShell(typeContainer);
 
             InitializeModules();
-
             
             Show(shell);
         }
@@ -43,6 +42,11 @@ namespace FotoMaX
 
         private static void RegisterTypes(ITypeContainer typeContainer, ILogger logger)
         {
+            if (typeContainer == null)
+            {
+                return;
+            }
+
             // Infrastructure
             typeContainer.Register<ILogger, Logger>();
             typeContainer.Register<ISettingsManagement, SettingsManagement>();
@@ -50,11 +54,13 @@ namespace FotoMaX
         
         private static Window CreateShell(ITypeContainer container)
         {
-            return null;
+            return new MainWindow();
         }
 
         private static void Show(Window shell)
         {
+            Application.Current.MainWindow = shell;
+            shell.Show();
         }
 
         private static void InitializeModules()
